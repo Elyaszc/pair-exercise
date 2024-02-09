@@ -4,13 +4,14 @@ import { useState } from "react"
 function Homepage() {
     const [foodpic, setFoodpic] = useState('')
 
-    useEffect(function () {
+    useEffect(() => {
         fetch('https://foodish-api.com/api/')
             .then(resp => resp.json())
-            ,[]})
-            .then(data => setFoodpic(data)
-                console.log(data)
-        )
+            .then(data => {
+                setFoodpic(data);
+                console.log(data.image);
+            });
+    }, []);
          
    
 
