@@ -8,13 +8,10 @@ function Homepage() {
         fetch('https://foodish-api.com/api/')
             .then(resp => resp.json())
             .then(data => {
-                setFoodpic(data);
-                console.log(data.image);
+                setFoodpic(data.image);
             });
     }, []);
          
-   
-
     return ( 
         <div>
             <h1 className="bg-slate-400">Homepage</h1>
@@ -22,7 +19,6 @@ function Homepage() {
         </div>
       
     )
-  
 
     }
   export default Homepage
